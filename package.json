@@ -1,0 +1,22 @@
+{
+  "name": "mern_shopping_list",
+  "version": "1.0.0",
+  "description": "- express\r - mongoose\r - concurrently",
+  "main": "server.js",
+  "dependencies": {
+    "concurrently": "^6.2.2",
+    "express": "^4.17.1",
+    "mongoose": "^6.0.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "client-install": "npm install --prefix client",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
