@@ -44,3 +44,5 @@ if (process.env.NODE_ENV === 'production') {
 // run server
 const port = process.env.PORT || 5000
 app.listen(port, () => console.log(`Server is running on port ${port}`))
+
+// changed MongoDB to access for everyone
