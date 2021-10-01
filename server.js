@@ -9,18 +9,18 @@ const itemsRouter = require('./items/router')
 app.use('/items', itemsRouter)
 
 // error handlers
-app.use((req, res, next) => {
-    next({
-        status: 404,
-        message: `${req.originalUrl} not found.`
-    })
-})
+// app.use((req, res, next) => {
+//     next({
+//         status: 404,
+//         message: `${req.originalUrl} not found.`
+//     })
+// })
 
-app.use((err, req, res, next) => {
-    console.log(err)
-    const { status = 500, message = 'Something is wrong!' } = err
-    res.status(status).json({ err: message })
-})
+// app.use((err, req, res, next) => {
+//     console.log(err)
+//     const { status = 500, message = 'Something is wrong!' } = err
+//     res.status(status).json({ err: message })
+// })
 
 // connect to database
 const mongoose = require('mongoose')
@@ -46,3 +46,4 @@ const port = process.env.PORT || 5000
 app.listen(port, () => console.log(`Server is running on port ${port}`))
 
 // changed MongoDB to access for everyone
+// comment out error handlers
